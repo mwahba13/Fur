@@ -16,7 +16,7 @@ public class DiceRow : MonoBehaviour
 
     private void Start()
     {
-        InitDiceRow();        
+        InitDiceRow();
     }
 
     private void InitDiceRow()
@@ -48,7 +48,7 @@ public class DiceRow : MonoBehaviour
 
 
     }
-
+//TODO - RESET after resolution phase
     public bool RemoveDiceFromRow()
     {
 

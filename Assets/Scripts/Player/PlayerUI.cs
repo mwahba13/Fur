@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public enum EPlayerState
 {
-    EBoard,EMarket,EUpgrade
+    EBoard,EMarket
 }
 
 public class PlayerUI : MonoBehaviour
@@ -13,7 +13,7 @@ public class PlayerUI : MonoBehaviour
     public EPlayerState PlayerState;
 
     public GameObject MarketUI;
-    public GameObject UpgradeUI;
+    //public GameObject UpgradeUI;
     
     public Button rightButton;
     public Button leftButton;
@@ -42,11 +42,7 @@ public class PlayerUI : MonoBehaviour
             case EPlayerState.EBoard:
                 SwitchState(EPlayerState.EMarket);
                 break;
-            case EPlayerState.EMarket:
-                break;
-            case EPlayerState.EUpgrade:
-                SwitchState(EPlayerState.EBoard);
-                break;
+
         }
     }
     
@@ -55,14 +51,11 @@ public class PlayerUI : MonoBehaviour
         
         switch (PlayerState)
         {
-            case EPlayerState.EBoard:
-                SwitchState(EPlayerState.EUpgrade);
-                break;
+
             case EPlayerState.EMarket:
                 SwitchState(EPlayerState.EBoard);
                 break;
-            case EPlayerState.EUpgrade:
-                break;
+
         }
     }
 
@@ -74,21 +67,19 @@ public class PlayerUI : MonoBehaviour
         if (newState == EPlayerState.EBoard)
         {
             leftButton.gameObject.SetActive(true);
-            rightButton.gameObject.SetActive(true);
+            rightButton.gameObject.SetActive(false);
             
+            MarketUI.SetActive(false);
+            //UpgradeUI.SetActive(false);
         }
         else if (newState == EPlayerState.EMarket)
         {
             leftButton.gameObject.SetActive(false);
             rightButton.gameObject.SetActive(true);
-        }
-        
-        else if (newState == EPlayerState.EUpgrade)
-        {
             
-            leftButton.gameObject.SetActive(true);
-            rightButton.gameObject.SetActive(false);
+            MarketUI.SetActive(true);
         }
+
     }
     
 }

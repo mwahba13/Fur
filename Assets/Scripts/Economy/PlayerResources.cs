@@ -31,8 +31,10 @@ public class PlayerResources : MonoBehaviour
     public TextMeshProUGUI buffaloPeltUI;
     public TextMeshProUGUI pemmicanUI;
     [Header("Marketplace UI Elements")] 
+    public TextMeshProUGUI beaverPeltStockText;
     public TextMeshProUGUI beaverStockText;
     public TextMeshProUGUI buffaloStockText;
+    public TextMeshProUGUI buffaloPeltStockText;
     public TextMeshProUGUI pemmicanStockText;
     
     // Start is called before the first frame update

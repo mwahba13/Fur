@@ -43,7 +43,7 @@ public class ActivitySolver : MonoBehaviour
                 
                 enemRoll = enemyRolls.Count > 0 ? enemyRolls.Pop() : 0;
                 
-                Debug.Log("Player rolls: " + playRoll + " Enem roll: "+ enemRoll);
+              //  Debug.Log("Player rolls: " + playRoll + " Enem roll: "+ enemRoll);
                 
                 if(playRoll > enemRoll)
                     AwardResourcesPlayer(playRoll - enemRoll);
@@ -61,7 +61,7 @@ public class ActivitySolver : MonoBehaviour
                 
                 playRoll = playerRolls.Count > 0 ? playerRolls.Pop() : 0;
                 
-                Debug.Log("Player rolls: " + playRoll + " Enem roll: "+ enemRoll);
+               // Debug.Log("Player rolls: " + playRoll + " Enem roll: "+ enemRoll);
 
                 
                 if(playRoll > enemRoll)
@@ -84,12 +84,12 @@ public class ActivitySolver : MonoBehaviour
             case ECardType.EHuntBeaver:
                 int awardedBeaver = Mathf.CeilToInt(i/econParams.huntBeaverDivisor);
                 _playerResources.IncrementBeaver(awardedBeaver);
-                Debug.Log("Player is awarded: " + awardedBeaver +" beavers");
+               // Debug.Log("Player is awarded: " + awardedBeaver +" beavers");
                 break;
             case ECardType.EHuntBuffalo:
                 int awardedBuff = Mathf.CeilToInt(i / econParams.huntBuffaloDivisor);
                 _playerResources.IncrementBuffalo(awardedBuff);
-                Debug.Log("Player is awarded: " + awardedBuff + " buffalo");
+               // Debug.Log("Player is awarded: " + awardedBuff + " buffalo");
                 break;
             
             case ECardType.EProcessBeaver:
@@ -98,7 +98,7 @@ public class ActivitySolver : MonoBehaviour
                     awardedBeavPelt = _playerResources.playerResources.beaver;
                 _playerResources.DecrementBeaver(awardedBeavPelt);
                 _playerResources.IncrementBeaverPelts(awardedBeavPelt);
-                Debug.Log("Player is awarded: "+ awardedBeavPelt+ " beaver pelts");
+              //  Debug.Log("Player is awarded: "+ awardedBeavPelt+ " beaver pelts");
                 break;
             
             case ECardType.EProcessBuffalo:
@@ -119,8 +119,8 @@ public class ActivitySolver : MonoBehaviour
                 _playerResources.IncrementBuffaloPelts(awardedBuffPelt);
                 _playerResources.IncrementPemmican(awardedPemmican);
                 
-                Debug.Log("Player gains: " + awardedBuffPelt +" buff pelt and " + awardedPemmican 
-                          + " Pemmican");
+              //  Debug.Log("Player gains: " + awardedBuffPelt +" buff pelt and " + awardedPemmican 
+                 //         + " Pemmican");
                 
                 break;
         }
@@ -134,12 +134,12 @@ public class ActivitySolver : MonoBehaviour
             case ECardType.EHuntBeaver:
                 int awardedBeaver = Mathf.CeilToInt(i/econParams.huntBeaverDivisor);
                 _econManager.IncrementBeaver(awardedBeaver);
-                Debug.Log("Enem is awarded: " + awardedBeaver +" beavers");
+               // Debug.Log("Enem is awarded: " + awardedBeaver +" beavers");
                 break;
             case ECardType.EHuntBuffalo:
                 int awardedBuff = Mathf.CeilToInt(i / econParams.huntBuffaloDivisor);
                 _econManager.IncrementBuffalo(awardedBuff);
-                Debug.Log("Enem is awarded: " + awardedBuff + " buffalo");
+              //  Debug.Log("Enem is awarded: " + awardedBuff + " buffalo");
                 break;
             case ECardType.EProcessBeaver:
                 int awardedBeavPelt = Mathf.CeilToInt(i / econParams.processBeaverDivisor);
@@ -147,7 +147,7 @@ public class ActivitySolver : MonoBehaviour
                     awardedBeavPelt = _econManager.opponentResources.beaver;
                 _econManager.DecrementBeaver(awardedBeavPelt);
                 _econManager.IncrementBeaverPelts(awardedBeavPelt);
-                Debug.Log("Enem is awarded: "+ awardedBeavPelt+ " beaver pelts");
+              //  Debug.Log("Enem is awarded: "+ awardedBeavPelt+ " beaver pelts");
                 break;
             case ECardType.EProcessBuffalo:
                 int awardedBuffTotal = Mathf.CeilToInt(i / econParams.processBuffaloDivisor);
@@ -165,8 +165,8 @@ public class ActivitySolver : MonoBehaviour
                 _econManager.DecrementBuffalo(awardedBuffTotal);
                 _econManager.IncrementBuffaloPelts(awardedBuffPelt);
                 _econManager.IncrementPemmican(awardedPemmican);
-                Debug.Log("Enemy gains: " + awardedBuffPelt +" buff pelt and " + awardedPemmican 
-                          + " Pemmican");
+             //   Debug.Log("Enemy gains: " + awardedBuffPelt +" buff pelt and " + awardedPemmican 
+             //             + " Pemmican");
                 break;
         }
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using cakeslice;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,12 +25,20 @@ public class ActivityCard : MonoBehaviour
     private Stack<GameObject> _diceStack = new Stack<GameObject>();
     private Stack<int> _diceRolls = new Stack<int>();
     private DiceManager _diceManager;
+    private Outline _outline;
     private int _numDice;
 
     private void Start()
     {
         UpdateDiceSpots();
         _diceManager = GameObject.FindWithTag("Player").GetComponent<DiceManager>();
+
+        if (isPlayerCard)
+        {
+         
+            _outline = GetComponent<Outline>();
+            _outline.eraseRenderer = true;   
+        }
         ResolveButton.endResolveEvent += ClearPlayerCard;
 
     }
@@ -172,5 +181,40 @@ public class ActivityCard : MonoBehaviour
     {
         
     }
-    
+
+    private void OnMouseEnter()
+    {
+        
+        if(isPlayerCard)
+        {
+            try
+            {
+                _outline.eraseRenderer = false;
+            }
+            catch (NullReferenceException e)
+            {
+ 
+            }
+            
+        }
+        
+        
+    }
+
+    private void OnMouseExit()
+    {
+        if (isPlayerCard)
+        {
+         
+            try
+            {
+                _outline.eraseRenderer = true;
+            }
+            catch (NullReferenceException e)
+            {
+ 
+            }   
+        }
+
+    }
 }

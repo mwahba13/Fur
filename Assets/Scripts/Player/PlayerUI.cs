@@ -13,6 +13,8 @@ public class PlayerUI : MonoBehaviour
     public EPlayerState PlayerState;
 
     public GameObject MarketUI;
+
+    public GameObject playerUI;
     //public GameObject UpgradeUI;
     
     public Button rightButton;
@@ -68,7 +70,7 @@ public class PlayerUI : MonoBehaviour
         {
             leftButton.gameObject.SetActive(true);
             rightButton.gameObject.SetActive(false);
-            
+            playerUI.SetActive(true);
             MarketUI.SetActive(false);
             //UpgradeUI.SetActive(false);
         }
@@ -76,7 +78,7 @@ public class PlayerUI : MonoBehaviour
         {
             leftButton.gameObject.SetActive(false);
             rightButton.gameObject.SetActive(true);
-            
+            playerUI.SetActive(false);
             MarketUI.SetActive(true);
         }
 

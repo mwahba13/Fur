@@ -1,5 +1,5 @@
 # Fur!
-## Pro Pelle Cutem - A Skin for a Skin## 
+## Pro Pelle Cutem - A Skin for a Skin
 
 It is 1812 and the Hudson's Bay Company is warring for dominion over the Canadian Fur Trade. Their economic war against their rivals, The North West Company, has begun to shed blood as the two warring corporations take up arms in what will be known as "The Pemmican War".
 

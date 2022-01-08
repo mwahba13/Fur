@@ -48,7 +48,6 @@ public class DiceRow : MonoBehaviour
 
 
     }
-//TODO - RESET after resolution phase
     public bool RemoveDiceFromRow()
     {
 

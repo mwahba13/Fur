@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,11 @@ public class EconomyManager : MonoBehaviour
     public TextMeshProUGUI buffaloUI;
     public TextMeshProUGUI buffaloPeltUI;
     public TextMeshProUGUI pemmicanUI;
+
+
+    #region Resource Increment/Decrement Functions
+
+     
     public void IncrementBeaver(int i)
     {
         opponentResources.beaver += i;
@@ -64,6 +70,10 @@ public class EconomyManager : MonoBehaviour
 
     }
 
+
+    #endregion
+    
+   
     private void UpdateUI()
     {
         /*

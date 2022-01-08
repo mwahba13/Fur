@@ -115,7 +115,6 @@ public class ActivityCard : MonoBehaviour
 
 
     //updates state of activity card
-    //todo: update graphical state of activity card
     private void UpdateCard(bool isAdding)
     {
         if (isAdding)
@@ -167,7 +166,6 @@ public class ActivityCard : MonoBehaviour
         return maxDiceCount != 6;
     }
     
-    //TODO: dice error box if try to add too many dice
     private void ThrowDiceError()
     {
         

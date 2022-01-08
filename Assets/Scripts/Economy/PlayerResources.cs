@@ -100,6 +100,8 @@ public class PlayerResources : MonoBehaviour
         buffaloStockText.text = playerResources.buffaloPelts.ToString();
         pemmicanStockText.text = playerResources.pemmican.ToString();
         playerTokens.text = playerResources.tokens.ToString();
+        beaverPeltStockText.text = playerResources.beaverPelts.ToString();
+        buffaloPeltStockText.text = playerResources.buffaloPelts.ToString();
 
         beaverUI.text = playerResources.beaver.ToString();
         beaverPeltUI.text = playerResources.beaverPelts.ToString();

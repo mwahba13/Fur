@@ -110,10 +110,10 @@ public class ActivitySolver : MonoBehaviour
                 int awardedBuffPelt = 0;
                 int awardedPemmican = 0;
                 for(int j = 0;j < awardedBuffTotal;j++)
-                    if (Random.Range(0, 1) == 0)
-                        awardedBuffPelt++;
-                    else
+                    if (Random.Range(0, 2) == 0)
                         awardedPemmican++;
+                    else
+                        awardedBuffPelt++;
 
                 _playerResources.DecrementBuffalo(awardedBuffTotal);
                 _playerResources.IncrementBuffaloPelts(awardedBuffPelt);
@@ -158,10 +158,10 @@ public class ActivitySolver : MonoBehaviour
                 int awardedBuffPelt = 0;
                 int awardedPemmican = 0;
                 for(int j = 0;j < awardedBuffTotal;j++)
-                    if (Random.Range(0, 1) == 0)
-                        awardedBuffPelt++;
-                    else
+                    if (Random.Range(0, 2) == 0)
                         awardedPemmican++;
+                    else
+                        awardedBuffPelt++;
                 _econManager.DecrementBuffalo(awardedBuffTotal);
                 _econManager.IncrementBuffaloPelts(awardedBuffPelt);
                 _econManager.IncrementPemmican(awardedPemmican);
